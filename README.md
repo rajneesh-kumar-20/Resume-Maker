@@ -1,3 +1,3 @@
-# Resume Maker Project
+# About Resume Maker Project
 
-This prject was created from local system
+This is a web-based application that lets users create, customize, and download professional resumes using pre-designed templates.
