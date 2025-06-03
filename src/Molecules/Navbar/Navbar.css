@@ -1,0 +1,279 @@
+/* Base navbar styling */
+.mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Adjusted for spacing */
+  padding: 15px 30px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.495);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.263);
+}
+
+.navLinks ul li a {
+  text-decoration: none;
+  color: white; 
+  /* transition: color 0.3s ease; */
+}
+
+.mainNav.scrolled .navLinks ul li a {
+  color: black; 
+}
+
+
+.mainNav.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logoNav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+}
+
+.logoNav img {
+  width: 50px;
+  height: auto;
+}
+
+.logoNav p {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+}
+
+.navLinks ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  color: inherit;
+}
+
+/* Each link item */
+.navLinks ul li {
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.navLinks ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.navLinks ul li:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hamburger{
+  opacity: 0;
+}
+
+.dropdown-menu {
+  overflow: hidden;
+  position: absolute;
+  width: 150px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 30px;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.763);
+  visibility: hidden;
+  opacity: 0;
+  border-top: 5px solid black;
+  transform: translateY(-10px);
+  transition: visibility 0.2s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu li {
+  color: rgb(0, 0, 0) !important;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+/* Button Styling */
+.navLinks ul button {
+  border: 2px solid;
+  padding: 8px 16px;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.navLinks ul button:hover{
+  background-color: white;
+  color: rgb(0, 0, 0) !important;
+}
+
+.navLinks ul button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Responsiveness - Media Queries */
+@media screen and (max-width: 768px) {
+  .mainNav {
+    padding: 20px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+  }
+
+  .logoNav {
+    gap: 8px;
+  }
+
+  .logoNav p {
+    font-size: 20px;
+  }
+  .navLinks{
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+  }
+
+  .dropdown:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2;
+    width: 200px;
+  }
+
+  /* Hide the navigation links by default on mobile */
+  .navLinks ul {
+    flex-direction: column;
+    align-items: flex-start;
+    /* align-items: center; */
+    width: 100%;
+    padding-left: 20px;
+    display: none; /* Hidden by default */
+  }
+
+  /* Show the links when the 'active' class is applied */
+  .navLinks.active ul {
+    display: flex; /* Show when active */
+    /* background-color: black; */
+  }
+
+  /* Hamburger Icon Styling */
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: inherit;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    opacity: 1;
+  }
+
+  /* Hamburger to Cross Transition */
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.scrolled span{
+    background-color: rgb(0, 0, 0);
+  }
+
+  /* .hamburger.active span{
+    background-color: black;
+  } */
+
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+    /* background-color: rgb(0, 0, 0); */
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+    /* background-color: rgb(0, 0, 0); */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logoNav p {
+    font-size: 18px;
+  }
+}
+
+/* Styles for desktops */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .navLinks ul{
+    gap:10px;
+    justify-content: space-around;
+    margin-right: 30px;
+    /* font-size: 10px; */
+  }
+  .navLinks ul li{
+    font-size: 15px;
+  }
+
+  .navLinks ul li button{
+    font-size: 15px;
+  }
+}

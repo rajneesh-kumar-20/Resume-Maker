@@ -1,0 +1,223 @@
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e6f0ff;
+}
+
+.signin-card {
+  display: flex;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  overflow: hidden;
+}
+
+.signin-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f9ff;
+  padding: 20px;
+}
+
+.default-image,
+.rocket-gif {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+}
+
+.signin-form {
+  flex: 1;
+  padding: 40px;
+}
+
+.signin-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.signin-form p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.signin-button {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.create-account-button {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: black;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.footer-res-signin {
+  margin: 0;
+  padding: 0;
+  height: auto; /* Adjust height for better responsiveness */
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  font-size: 14px;
+  background: url(https://d1lamhf6l6yk6d.cloudfront.net/uploads/2023/04/Content-Category-Subpage-Banner-Subscriptions-e1693822762168.png)
+    no-repeat center center/cover;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Default to column layout for smaller screens */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+  text-align: center; /* Center-align content for smaller screens */
+}
+
+.brand h1 {
+  font-size: 28px; /* Larger text for better readability */
+  margin-bottom: 10px;
+  color: #61dafb;
+}
+
+.brand p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white; /* Ensure contrast on dark backgrounds */
+}
+
+.links h3,
+.social h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #61dafb;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin: 8px 0;
+}
+
+.links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+  color: #61dafb;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px; /* Adjust spacing for smaller screens */
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #ffffff; /* Maintain white color for better contrast */
+  font-size: 24px; /* Larger size for better visibility */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #61dafb;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+  color: white; /* Ensure readability */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row; /* Switch to row layout for medium screens and up */
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    text-align: left; /* Align content to the left for larger screens */
+  }
+
+  .brand h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 10px;
+  }
+
+  .brand h1 {
+    font-size: 22px;
+  }
+
+  .brand p {
+    font-size: 14px;
+  }
+
+  .links h3,
+  .social h3 {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+  .footer-bottom p {
+    margin: 0px;
+  }
+}

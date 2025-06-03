@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-page {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  padding: 20px;
+  background: linear-gradient(-45deg, #d1f1ff, #b2e7fe, #8fd3f4, #ffc9e0);
+  background-size: 400% 400%;
+  animation: flowAnimation 8s ease infinite;
+  color: #000;
+  min-height: 100vh;
+}
+
+@keyframes flowAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 300px; /* Minimum width for smaller screens */
+  margin: 10px;
+  margin-top: 200px;
+}
+
+.info-card {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.info-card h3 {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap; /* Wrap inputs on smaller screens */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s all ease-in-out;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #000;
+  border-top: 5px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.colorful-div {
+  display: flex;
+  flex-wrap: wrap; /* Wrap for smaller screens */
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 45%;
+  top: 150px;
+}
+
+.colorful-div span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/* Footer Section */
+.footer-res-con {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  font-size: 14px;
+  background: url(https://d1lamhf6l6yk6d.cloudfront.net/uploads/2023/04/Content-Category-Subpage-Banner-Subscriptions-e1693822762168.png)
+    no-repeat center center/cover;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap for smaller screens */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px; /* Minimum width for smaller screens */
+  margin: 20px;
+}
+
+.brand h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #61dafb;
+}
+
+.brand p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.links h3,
+.social h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin: 8px 0;
+}
+
+.links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+  color: #61dafb;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #000000;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #61dafb;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contact-page {
+    flex-direction: column; /* Stack content on smaller screens */
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form{
+    margin-top: 20px;
+  }
+
+  .social-icons {
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .links ul li {
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+  }
+}

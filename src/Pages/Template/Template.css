@@ -1,0 +1,55 @@
+.tempSec {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #dbfeff;
+}
+
+.temp {
+  background: #e5fdff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  margin-top: 100px;
+  padding: 10px;
+  /* height: 500px; */
+  /* max-height: 700px; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.temp:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.temp img {
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.temp button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.temp button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.temp button:active {
+  background-color: #004494;
+}
